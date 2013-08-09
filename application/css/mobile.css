@@ -1,0 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0b1 | 201101
+NOTE: WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define visible focus styles!
+:focus {
+outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-size: 0.75em;
+  font-family: Arial, Helvetica, sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-size: 1em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.9em; }
+
+body, html, #shoe, .deck {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px; }
+
+/**
+ *   Individual Card Styles
+ */
+#card-movie_search_results {
+  z-index: 50; }
+
+/**
+ *   Deck styles
+ */
+.deck {
+  position: relative; }
+
+/**
+ *   Deck styles
+ */
+.deck {
+  position: relative; }
+
+.card {
+  height: 100%;
+  width: 100%;
+  left: -100%;
+  position: absolute; }
+
+.card .active {
+  left: 0px; }
+
+/**
+ *   Header taskbar styles
+ */
+.screenbar {
+  background: #7d9dce;
+  background: -moz-linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d9dce), color-stop(100%, #abc1e1));
+  background: -o-linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%);
+  background: -ms-linear-gradien(90deg, #7d9dce 0%, #abc1e1 100%);
+  background: linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%); }
+
+header#taskbar {
+  color: #FFFFFF;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: 1px solid #BF2628; }
+  header#taskbar h1.branding {
+    margin: 0px;
+    float: left;
+    width: 73px;
+    height: 32px;
+    text-indent: -10000px;
+    overflow: hidden;
+    background: url("../img/momemo.png") no-repeat top left; }
+  header#taskbar .clear-search {
+    float: right;
+    width: 35px;
+    height: 35px;
+    display: none;
+    overflow: hidden;
+    text-indent: -10000px;
+    background: url("../img/clear.png") 50% 50% no-repeat; }
+
+header#taskbar.searchactive .clear-search {
+  display: block; }
+header#taskbar.searchactive form#add-movie {
+  margin-right: 40px; }
+
+input, select, textarea, button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input[type="text"] {
+  border: 1px solid #000000;
+  padding: 5px; }
+
+input.full-width {
+  width: 100%; }
+
+form#add-movie {
+  margin-left: 80px; }
+
+input.search {
+  padding-left: 30px;
+  background: url("../img/search.png") 5px 50% no-repeat transparent;
+  background-size: auto 50%;
+  border: none;
+  border-bottom: 1px solid #BF2628;
+  color: #FFFFFF;
+  font-size: 1.5em; }
+
+input.search::-webkit-input-placeholder, input.search:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5); }
+
+input.search.loading {
+  background-image: url("../img/loading.gif"); }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  header#taskbar h1.branding {
+    background-image: url("../img/highres/momemo.png");
+    background-size: 73px 32px; } }
