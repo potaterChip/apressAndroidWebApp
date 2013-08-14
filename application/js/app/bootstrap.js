@@ -82,7 +82,7 @@ app.bootstrap = (function() {
 	if (!localStorage.getItem('favorites')) {
 		//if it doesn't, create an empty array and assign it to the storage
 		var favorites = [];
-		localStorage.favorites = JSON.stringify(favorties);
+		localStorage.favorites = JSON.stringify(favorites);
 	}
 
 	return {

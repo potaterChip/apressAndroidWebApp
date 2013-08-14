@@ -5,7 +5,7 @@ app.controller = app.controller || {};
 app.controller.movies = function() {
 	var _self = this,
 	_searchfield = document.querySelector('#add-movie input[name="query"]'),
-	_searchform = document.getElementById('add-movie');
+	_searchform = document.getElementById('add-movie'),
 	_searchresultscard = document.getElementById('card-movie_search_results'),
 	_searchTimeout,
 	_viewScrolls = [],
@@ -29,7 +29,7 @@ app.controller.movies = function() {
 			}
 		});
 		
-		_searchform.addEventListner('submit', function(e){
+		_searchform.addEventListener('submit', function(e){
 			e.preventDefault();
 			
 			//Clear the _searchTimeout timeout

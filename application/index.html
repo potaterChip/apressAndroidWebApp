@@ -2,9 +2,10 @@
 <html lang="en-GB" dir="ltr">
 	<head>
 		<meta charset="UTTF-8"/>
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; target-densitydpi=device-dpi;" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>Mo Memo</title>
 		<link rel="stylesheet" type="text/css" href="css/mobile.css" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 		<link rel="apple-touch-icon-precomposed" href="img/home-screen-icon.png">
 	</head>
 	
@@ -37,6 +38,41 @@
 			</div>
 			<!-- End Movie List Deck -->
 		</div>
+		<!-- Load all of the Javascript dependencies -->
+		<!-- Load any lib files -->
+		<script src="js/lib/cubiq/iscroll.js"></script>
+		
+		<!-- Load the utility files -->
+		<script src="js/app/utility/validator.js"></script>
+		<script src="js/app/utility/layout.js"></script>
+		<script src="js/app/utility/deck.js"></script>
+		<script src="js/app/utility/jsonp.js"></script>
+		
+		<!-- Load the custom types -->
+		<script src="js/app/type/format.js"></script>
+		<script src="js/app/type/releaseDate.js"></script>
+		
+		<!-- Load the models -->
+		<script src="js/app/model/actor.js"></script>
+		<script src="js/app/model/movie.js"></script>
+		<script src="js/app/model/video.js"></script>
+		<script src="js/app/model/videosource.js"></script>
+		
+		<!-- Load the views -->
+		<script src="js/app/view/movie.js"></script>
+		<script src="js/app/view/movielistitem.js"></script>
+		<script src="js/app/view/movielist.js"></script>
+		
+		<!-- Load the controller -->
+		<script src="js/app/controller/movies.js"></script>
+		<script src="js/app/controller/favorite.js"></script>
+		
+		<!-- Bootstrap the application -->
+		<script src="js/app/bootstrap.js"></script>
+		<script>
+			app.bootstrap.initScripts();
+		</script>
+			
 	</body>
 </html>
 <!--					<input type="submit" value="ADD" />

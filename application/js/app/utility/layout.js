@@ -12,7 +12,7 @@ app.utility.layout = (function(){
 		/**
 		 *First loop through each deck 
 		 */
-		[].forEach.call(document.getElementByClassName('deck'), function(el){
+		[].forEach.call(document.getElementsByClassName('deck'), function(el){
 			/**
 			 *And set the height of the deck by subtracting the height of
 			 * the taskbar from the height of the document body 
