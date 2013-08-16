@@ -25,4 +25,4 @@ app.utility.deck = (function(){
 			}
 		}
 	}
-})
+})();

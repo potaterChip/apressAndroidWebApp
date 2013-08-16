@@ -29,10 +29,10 @@ app.bootstrap = (function() {
 				target = null;
 				break;
 			}
+			
+			target = target.parentNode;
 		}
 		
-		//Assign the target.parentNode to the target variable
-		target = target.parentNode;
 		
 		/**
 		 *If there's a target, then process the link auction 
