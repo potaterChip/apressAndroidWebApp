@@ -92,12 +92,13 @@ body, html, #shoe, .deck {
  */
 .deck {
   position: relative; }
-
-/**
- *   Deck styles
- */
-.deck {
-  position: relative; }
+  .deck .card {
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    position: absolute; }
+  .deck .card.active {
+    left: 0px; }
 
 /**
  *   Standard list
@@ -138,6 +139,44 @@ body, html, #shoe, .deck {
       color: #000000; }
 .movie-list li:nth-child(odd) {
   background: #97B2D9; }
+
+/**
+ *   Header taskbar styles
+ */
+.screenbar {
+  background: #7d9dce;
+  background: -moz-linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d9dce), color-stop(100%, #abc1e1));
+  background: -o-linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%);
+  background: -ms-linear-gradien(90deg, #7d9dce 0%, #abc1e1 100%);
+  background: linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%); }
+
+header#taskbar {
+  color: #FFFFFF;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: 1px solid #BF2628; }
+  header#taskbar h1.branding {
+    margin: 0px;
+    float: left;
+    width: 73px;
+    height: 32px;
+    text-indent: -10000px;
+    overflow: hidden;
+    background: url("../img/momemo.png") no-repeat top left; }
+  header#taskbar .clear-search {
+    float: right;
+    width: 35px;
+    height: 35px;
+    display: none;
+    overflow: hidden;
+    text-indent: -10000px;
+    background: url("../img/clear.png") 50% 50% no-repeat; }
+
+header#taskbar.searchactive .clear-search {
+  display: block; }
+header#taskbar.searchactive form#add-movie {
+  margin-right: 40px; }
 
 /**
  *   Animations for the poster header
@@ -221,53 +260,6 @@ body, html, #shoe, .deck {
         padding: 10px 10px 0 10px; }
       .movie-content .block-container .block .content {
         padding: 10px; }
-
-.card {
-  height: 100%;
-  width: 100%;
-  left: -100%;
-  position: absolute; }
-
-.card .active {
-  left: 0px; }
-
-/**
- *   Header taskbar styles
- */
-.screenbar {
-  background: #7d9dce;
-  background: -moz-linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d9dce), color-stop(100%, #abc1e1));
-  background: -o-linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%);
-  background: -ms-linear-gradien(90deg, #7d9dce 0%, #abc1e1 100%);
-  background: linear-gradient(90deg, #7d9dce 0%, #abc1e1 100%); }
-
-header#taskbar {
-  color: #FFFFFF;
-  overflow: hidden;
-  padding: 10px;
-  border-bottom: 1px solid #BF2628; }
-  header#taskbar h1.branding {
-    margin: 0px;
-    float: left;
-    width: 73px;
-    height: 32px;
-    text-indent: -10000px;
-    overflow: hidden;
-    background: url("../img/momemo.png") no-repeat top left; }
-  header#taskbar .clear-search {
-    float: right;
-    width: 35px;
-    height: 35px;
-    display: none;
-    overflow: hidden;
-    text-indent: -10000px;
-    background: url("../img/clear.png") 50% 50% no-repeat; }
-
-header#taskbar.searchactive .clear-search {
-  display: block; }
-header#taskbar.searchactive form#add-movie {
-  margin-right: 40px; }
 
 .footer {
   height: 40px;

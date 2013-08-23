@@ -17,14 +17,20 @@ body, html, #shoe, .deck {
  */
 .deck {
   position: relative;
+  
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    position: absolute;
+  }
+
+  .card.active {
+    left: 0px;
+  }
 }
 
-/**
- *   Deck styles
- */
-.deck {
-  position: relative;
-}
 
 /**
  *   Standard list
@@ -81,6 +87,54 @@ body, html, #shoe, .deck {
   
   li:nth-child(odd) {
     background: #97B2D9;
+  }
+}
+
+
+
+/**
+ *   Header taskbar styles
+ */
+
+.screenbar {
+  @include gradient(#7D9DCE, #ABC1E1, 90deg);
+}
+
+header#taskbar {
+  color: #FFFFFF;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: 1px solid #BF2628;
+ 
+  h1.branding {
+    margin: 0px;
+    float: left;
+    width: 73px;
+    height: 32px;
+    text-indent: -10000px;
+    overflow: hidden;
+    background: url('../img/momemo.png') no-repeat top left;
+  }
+ 
+  .clear-search {
+    float: right;
+    width: 35px;
+    height: 35px;
+    display: none;
+    overflow: hidden;
+    text-indent: -10000px;
+    background: url('../img/clear.png') 50% 50% no-repeat;
+  }
+}
+
+header#taskbar.searchactive {
+  
+  .clear-search {
+    display: block;
+  }
+  
+  form#add-movie {
+    margin-right: 40px;
   }
 }
 
@@ -175,62 +229,6 @@ body, html, #shoe, .deck {
   }
 }
 
-.card {
-  height: 100%;
-  width: 100%;
-  left: -100%;
-  position: absolute;
-}
-
-.card .active {
-  left: 0px;
-}
-
-/**
- *   Header taskbar styles
- */
-
-.screenbar {
-  @include gradient(#7D9DCE, #ABC1E1, 90deg);
-}
-
-header#taskbar {
-  color: #FFFFFF;
-  overflow: hidden;
-  padding: 10px;
-  border-bottom: 1px solid #BF2628;
- 
-  h1.branding {
-    margin: 0px;
-    float: left;
-    width: 73px;
-    height: 32px;
-    text-indent: -10000px;
-    overflow: hidden;
-    background: url('../img/momemo.png') no-repeat top left;
-  }
- 
-  .clear-search {
-    float: right;
-    width: 35px;
-    height: 35px;
-    display: none;
-    overflow: hidden;
-    text-indent: -10000px;
-    background: url('../img/clear.png') 50% 50% no-repeat;
-  }
-}
-
-header#taskbar.searchactive {
-  
-  .clear-search {
-    display: block;
-  }
-  
-  form#add-movie {
-    margin-right: 40px;
-  }
-}
 
 .footer {
   height: 40px;

@@ -46,7 +46,7 @@ app.controller.movies = function() {
 			/**
 			 * This is the value of the input field 
 			 */
-			var value = this.value;
+			var value = _searchfield.value;
 			
 			/**
 			 * This will clear the search timeout 
@@ -77,13 +77,13 @@ app.controller.movies = function() {
 			 * Encode the query so that it can be passed
 			 * Through the URL
 			 */
-			query = encodeURIComponenet(query);
+			query = encodeURIComponent(query);
 			
 			/**
 			 * Create a new JSONP request 
 			 */
 			var jsonp = new app.utility.jsonp(
-				'http:/api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=gbsqxdbgvjzhmn27x2xbxfa9&q=' + query,
+				'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=gbsqxdbgvjzhmn27x2xbxfa9&q=' + query,
 				'app.bootstrap.getController("movies").showSearchResults');
 			
 			/**
@@ -138,7 +138,9 @@ app.controller.movies = function() {
 		// Check to see whether the search scroll is null
 		if(_searchScroll !== null) {
 			// If it isn't, destory it
+			try {
 			_searchScroll.destroy();
+			}catch (err) {};
 			_searchScroll = null;
 		}
 		
