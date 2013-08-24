@@ -55,7 +55,7 @@ app.bootstrap = (function() {
 			 */
 			if(typeof _controller[controller] === 'undefined' || typeof _controller[controller][action] === 'undefined'){
 				//If they don't exist, throw an exception
-				throw "Action " + action + "for controller " + controller + " doesn't appear to exist";
+				throw "Action " + action + " for controller " + controller + " doesn't appear to exist";
 				return;
 			}
 			
