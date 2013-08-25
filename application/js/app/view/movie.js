@@ -30,7 +30,12 @@ app.view.movie = function(movie) {
 						'<p>', movie.getSynopsis(), '</p>',
 						'</div>', 
 					'</section>',
-					
+					'<section class="block" id="block-cast">',
+						'<div class="content">',
+							'<h3>Cast List</h3>',
+							'<ul class="list scrolling medium"></ul>',
+						'</div>',
+					'</section>',
 					'<section class="block" id="block-video">',
 						'<div class="content"',
 							'<h3>Video Clips</h3>',

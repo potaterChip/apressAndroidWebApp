@@ -14,12 +14,10 @@ app.type.releaseDate = function(cinema, dvd) {
 	var _dvd,
 	_cinema;
 	
-	/**
-	 *Sets the instance variables using setters 
-	 */
-
-	this.setDvd(_dvd);
-	this.setCinema(_cinema);
+	this.init = function() {
+		this.setDvd(dvd);
+		this.setCinema(cinema);
+	}
 	/**
 	 * Gets the DVD release date
 	 */
@@ -45,4 +43,10 @@ app.type.releaseDate = function(cinema, dvd) {
 		_cinema = cinema;
 	}
 
+	
+	/**
+	 *Sets the instance variables using setters 
+	 */
+
+	this.init();
 }
