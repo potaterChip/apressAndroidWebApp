@@ -165,6 +165,7 @@ header#taskbar.searchactive {
   .poster {
     position: absolute;
     top: 0%;
+    z-index: -4;
     @include animation(posteranimation 10s ease 0 infinite alternate);
   }
   

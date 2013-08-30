@@ -209,6 +209,7 @@ header#taskbar.searchactive form#add-movie {
   .movie-header .poster {
     position: absolute;
     top: 0%;
+    z-index: -4;
     animation: posteranimation 10s ease 0 infinite alternate;
     -moz-animation: posteranimation 10s ease 0 infinite alternate;
     -webkit-animation: posteranimation 10s ease 0 infinite alternate; }
