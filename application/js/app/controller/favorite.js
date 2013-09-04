@@ -63,7 +63,7 @@ app.controller.favorites = function() {
 		/**
 		 * Check to see whether the movie is already in the user's favorites 
 		 */
-		for(var i = 0; i < favorites.length; i++) {
+		for(var i = 0; i < _favorites.length; i++) {
 			if(_favorites[i].id == _movie.id) {
 				return;
 			}
@@ -95,7 +95,7 @@ app.controller.favorites = function() {
 		//Loop through the favorites
 		for(var i = 0; i < _favorites.length; i++) {
 			// If there's a match
-			if(_favorites[i].id == id) {
+			if(_favorites[i].id == _id) {
 				//Remove the item from teh favorites using splice
 				_favorites.splice(i, 1);
 			}
